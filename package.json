@@ -14,5 +14,15 @@
   "type": "module",
   "workspaces": [
     "src/token_frontend"
-  ]
+  ],
+  "dependencies": {
+    "@dfinity/auth-client": "^2.4.1",
+    "nodemon": "^3.1.10"
+  },
+  "version": "1.0.0",
+  "description": "Principal: xpatv-7nk5z-t3lvk-ujw6d-pxudi-gzaz7-p5pap-dun5e-2toyl-2fx7f-xae",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
