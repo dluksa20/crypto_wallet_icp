@@ -1,14 +1,14 @@
-import Principal "mo:base/Principal";
 import HashMap "mo:base/HashMap";
 import Debug "mo:base/Debug";
 import Iter "mo:base/Iter";
+import Principal "mo:base/Principal";
 
 
-persistent actor Token {
+persistent actor class Token(ownerPrincipal : Text) {
 
   stable let totalSuply : Nat = 1000000000;
   // 'dfx identity get-principal' string needs to be changed if run on different computer
-  stable let owner : Principal = Principal.fromText("snebv-5rejf-xkjfy-r3ut2-iigt4-irhe2-6fm7g-obd5p-dvflf-eoril-zqe");
+  stable let owner : Principal = Principal.fromText(ownerPrincipal);
   stable let symbol : Text = "DLUK";
 
   transient var balances = HashMap.HashMap<Principal, Nat>(1, Principal.equal, Principal.hash);
