@@ -17,14 +17,21 @@ if [ -z "$OWNER_PUBLIC_KEY" ]; then
     exit 1
 fi
 
-# FIX 2: Correct Candid Argument Formatting
-# Motoko expects Text ("<principal_id>"). This requires internal double quotes.
-DFX_ARG="(\"$OWNER_PUBLIC_KEY\")"
 
+# Pass arguments to backend canister actor class
+DFX_ARG="(\"$OWNER_PUBLIC_KEY\")"
 echo "Deploying with Candid Argument: $DFX_ARG"
 
-# Deploy the canister using the correctly formatted argument
-# Added standard flags for robust upgrade/persistence handling
+# Deploy the backend canister
 dfx deploy token_backend --argument "$DFX_ARG"
 
-echo "Deployment successful for token_backend!"
+
+
+
+echo "
+# -------------------------------------------#
+#                  SUCCESS                   #
+# -------------------------------------------#"
+
+
+echo "CANISTER DEPLYED!"

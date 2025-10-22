@@ -1,0 +1,11 @@
+===========================================
+ DFINITY TOKEN CANISTER DEPLOYMENT
+===========================================
+
+--- 🔑 Owner Principal ID (Raw) ---
+xhirz-hmtyb-nr2rt-rawzs-46zml-isx6k-3m7ua-yho4m-afuoj-5ank2-aqe
+
+--- 📝 Candid Deployment Argument ---
+("xhirz-hmtyb-nr2rt-rawzs-46zml-isx6k-3m7ua-yho4m-afuoj-5ank2-aqe")
+
+Executing: dfx deploy token_backend --argument "("xhirz-hmtyb-nr2rt-rawzs-46zml-isx6k-3m7ua-yho4m-afuoj-5ank2-aqe")"

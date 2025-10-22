@@ -1,0 +1,13 @@
+===========================================
+ DFINITY Local Wallet and Canister Info
+===========================================
+
+--- 🔑 Owner Principal Key ---
+principal "xhirz-hmtyb-nr2rt-rawzs-46zml-isx6k-3m7ua-yho4m-afuoj-5ank2-aqe"
+
+--- 💰 Owner Token Balance on 'token_backend' ---
+(1_000_000_000 : nat)
+
+--- ⚙️ Backend Canister ID ---
+principal "uxrrr-q7777-77774-qaaaq-cai"
+===========================================
