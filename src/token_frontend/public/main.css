@@ -1,5 +1,5 @@
 html {
-    background: #a5a4ce;
+    background: #a5a4fe;
     font-family: System, monospace;
     font-size: 10pt;
   }
@@ -9,7 +9,7 @@ html {
     margin: 0;
   }
   
-  span:after {
+  /* span:after {
     content: " ";
     display: inline-block;
     width: 2%;
@@ -35,7 +35,7 @@ html {
     border: 6px double white;
     padding: 1em;
     box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgba(0, 0, 0, 0.5);
-    max-width: 640px;
+    max-width: 840px;
   }
   
   .window.white {
@@ -179,4 +179,4 @@ html {
     display: table;
     margin: auto;
   }
-  
+   */

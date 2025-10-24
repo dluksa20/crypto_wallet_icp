@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { token_backend, canisterId, createActor } from "../../../declarations/token_backend";
+import { token_backend, canisterId, createActor } from "../../../../declarations/token_backend";
 import { AuthClient } from "@dfinity/auth-client";
 
 function Faucet() {

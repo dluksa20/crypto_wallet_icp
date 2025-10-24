@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Principal } from "@dfinity/principal";
-import { token_backend } from "../../../declarations/token_backend";
+import { token_backend } from "../../../../declarations/token_backend";
 
 function Balance() {
 

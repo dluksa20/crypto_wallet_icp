@@ -1,0 +1,62 @@
+:root {
+  /* 🎨 Color Palette */
+  --color-primary: #ffffff;            
+  --color-text: #333333;               
+  --color-text-secondary: #555555;     
+  --color-background-light: #ffffff;   
+  --color-border-light: #e0e0e0;       
+  
+  /* 📐 Layout & Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  
+  /* 🖋️ Typography */
+  --font-family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-size-base: 1rem;
+  --font-size-title: 1.5rem;
+  --font-weight-bold: 700;
+  
+  /* 🔳 Shadow/Depth */
+  --shadow-subtle: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --header-height: 4rem; 
+}
+
+
+.header-container {
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+}
+
+
+/* LOGO */
+.nav-logo * {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 50px;
+}
+
+.nav-logo * {
+    text-decoration: none;
+}
+
+
+
+
+/* LINKS */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links * {
+    text-decoration: none;
+}
