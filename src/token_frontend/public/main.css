@@ -2,6 +2,7 @@ html {
     background: #a5a4fe;
     font-family: System, monospace;
     font-size: 10pt;
+    box-sizing: border-box;
   }
   
   body {
@@ -9,6 +10,15 @@ html {
     margin: 0;
   }
   
+
+  html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Ensures all elements inherit border-box */
+}
   /* span:after {
     content: " ";
     display: inline-block;
