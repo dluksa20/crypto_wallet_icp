@@ -1,0 +1,7 @@
+.send-container {
+    display: flex;
+    flex-direction: column;
+    gap: 400px;
+    justify-content: center;
+    align-items: center;
+}

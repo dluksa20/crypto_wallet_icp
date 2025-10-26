@@ -1,16 +1,14 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
 import Faucet from '../../components/Faucet/Faucet'
-import Balance from '../../components/Balance/Balance'
 
-const Wallet = () => {
+const Claim = () => {
   return (
     <div>
         <Header />
-        <Balance />
-      Hello
+        <Faucet />
     </div>
   )
 }
 
-export default Wallet
+export default Claim

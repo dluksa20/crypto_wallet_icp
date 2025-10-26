@@ -1,0 +1,175 @@
+:root {
+  /* ===== Color Palette ===== */
+  --color-bg: #0b0d17;                  /* Main background */
+  --color-surface: #1a1c29;             /* Card surface */
+  --color-accent: #00aaff;              /* Primary accent (glow blue) */
+  --color-accent-dark: #0077cc;
+  --color-text: #f2f4f8;
+  --color-text-secondary: #a0a0a0;
+  --color-error: #ff5555;
+
+  /* ===== Spacing ===== */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+
+  /* ===== Typography ===== */
+  --font-family-primary: "Orbitron", sans-serif; 
+  --font-family-secondary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-size-base: 1.2rem;
+  --font-size-title: 2rem;
+  --font-weight-bold: 700;
+
+  /* ===== Shadows ===== */
+  --shadow-glow: 0 0 20px rgba(0, 170, 255, 0.3);
+  --shadow-hover: 0 0 25px rgba(0, 170, 255, 0.5);
+}
+
+/* ===== Base Background ===== */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-secondary);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+/* ===== Window Card Layout ===== */
+.window.white {
+  background: var(--color-surface);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-glow);
+  max-width: 480px;
+  width: 90%;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.window.white:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* ===== Transfer Container ===== */
+.transfer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* ===== Fieldset Styling ===== */
+fieldset {
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: var(--space-md);
+  margin: 0;
+  background: rgba(255,255,255,0.02);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+fieldset:hover {
+  border-color: var(--color-accent);
+  background: rgba(255,255,255,0.05);
+}
+
+legend {
+  font-family: var(--font-family-primary);
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  text-shadow: 0 0 8px rgba(0,170,255,0.5);
+  letter-spacing: 0.5px;
+}
+
+/* ===== Input Fields ===== */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: var(--space-sm);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.08);
+  color: var(--color-text);
+  font-family: var(--font-family-secondary);
+  transition: all 0.25s ease;
+}
+
+input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 10px rgba(0,170,255,0.3);
+  outline: none;
+}
+
+/* ===== Button Section ===== */
+.trade-buttons {
+  margin-top: var(--space-md);
+}
+
+#btn-transfer {
+  width: 100%;
+  padding: 14px;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-glow);
+  transition: background 0.3s ease, transform 0.15s ease, box-shadow 0.3s ease;
+}
+
+#btn-transfer:hover:not(:disabled) {
+  background: var(--color-accent-dark);
+  box-shadow: var(--shadow-hover);
+}
+
+#btn-transfer:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+#btn-transfer:disabled {
+  background: rgba(0,170,255,0.3);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ===== Feedback Message ===== */
+p.feedback {
+  background: rgba(0,255,170,0.1);
+  border: 1px solid rgba(0,255,170,0.3);
+  color: #66ffcc;
+  border-radius: 8px;
+  text-align: center;
+  padding: var(--space-md);
+  font-weight: bold;
+  font-family: var(--font-family-secondary);
+  margin-top: var(--space-md);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+p.feedback.error {
+  background: rgba(255,0,0,0.1);
+  border: 1px solid rgba(255,0,0,0.3);
+  color: var(--color-error);
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
