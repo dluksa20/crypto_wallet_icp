@@ -1,0 +1,6 @@
+.claim-container {
+    display: flex;
+    flex-direction: column;
+    gap: 400px;
+    align-items: center;
+}

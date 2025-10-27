@@ -36,7 +36,7 @@ function Transfer() {
   }
 
   return (
-    <div className="window white">
+    <div className="transfer-container">
       <div className="transfer">
         <fieldset>
           <legend>Recipient Account</legend>

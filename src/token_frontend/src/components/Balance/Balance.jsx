@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Principal } from "@dfinity/principal";
 import { token_backend } from "../../../../declarations/token_backend";
+import './Balance.css'
 
 function Balance() {
 
@@ -21,9 +22,9 @@ function Balance() {
 
 
   return (
-    <div className="window white">
-      <label>Check account token balance:</label>
-      <p>
+    <div className="balance-container">
+      <fieldset>
+        <legend>Check account token balance:</legend>
         <input
           id="balance-principal-id"
           type="text"
@@ -31,7 +32,7 @@ function Balance() {
           value={inputValue}
           onChange={(e) => setInput(e.target.value)}
         />
-      </p>
+      </fieldset>
       <p className="trade-buttons">
         <button
           id="btn-request-balance"

@@ -1,0 +1,11 @@
+.screen {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    align-items: center;
+}
+.home-container {
+    display: inherit;
+    flex-direction: column;
+    gap: 40px;
+}
