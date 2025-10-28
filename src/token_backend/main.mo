@@ -41,7 +41,7 @@ persistent actor class Token(ownerPrincipal : Text) {
       let result = await transfer(msg.caller, amount);
       return result;
     } else {
-      return "Already Claimed!"
+      return "claimed"
     }
   };
 
@@ -61,9 +61,9 @@ persistent actor class Token(ownerPrincipal : Text) {
       let toBalance = await balanceOf(to);
       let newToBalance = toBalance + amount;
       balances.put(to, newToBalance);
-      return "Success";
+      return "success";
     } else {
-      return "Insufficient funds"
+      return "insufficient funds"
     }
     
   };

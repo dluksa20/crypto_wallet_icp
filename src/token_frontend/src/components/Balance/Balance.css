@@ -155,12 +155,12 @@ input:focus {
 }
 
 /* Balance Output Text */
-.window p:last-child {
+/* .window p:last-child {
   color: var(--color-success-text);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-base);
   text-align: center;
-}
+} */
 
 /* Helper styles for component structure */
 .window label {
