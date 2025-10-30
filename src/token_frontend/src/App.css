@@ -1,0 +1,21 @@
+
+html {
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family-secondary);
+    min-height: 100vh;
+  }
+  
+
+  *,
+  *::before,
+  *::after {
+  box-sizing: inherit;
+}
+  

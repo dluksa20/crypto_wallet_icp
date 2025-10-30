@@ -19,7 +19,9 @@
     "@dfinity/auth-client": "^2.4.1",
     "nodemon": "^3.1.10",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.9.4"
+    "react-router-dom": "^7.9.4",
+    "styled": "^1.0.0",
+    "styled-components": "^6.1.19"
   },
   "version": "1.0.0",
   "description": "Principal: xpatv-7nk5z-t3lvk-ujw6d-pxudi-gzaz7-p5pap-dun5e-2toyl-2fx7f-xae",

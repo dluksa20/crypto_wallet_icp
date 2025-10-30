@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/App/App.jsx';
-import '../public/main.css';
+import App from './App.jsx';
+import './App.css';
+import './assets/styles.css'
 import { AuthClient } from '@dfinity/auth-client';
 import { BrowserRouter } from 'react-router-dom';
 

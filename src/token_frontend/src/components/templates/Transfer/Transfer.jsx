@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Principal } from "@dfinity/principal";
-import { token_backend } from "../../../../declarations/token_backend";
+import { token_backend } from "../../../../../declarations/token_backend";
 import "./Transfer.css";
+import BtnPrimary from "../../ui/buttonPrimary/BtnPrimary";
 
 function Transfer() {
   const [recipientId, setId] = useState("");
@@ -60,11 +61,7 @@ function Transfer() {
           />
         </fieldset>
 
-        <div className="trade-buttons">
-          <button disabled={isDisabled} id="btn-transfer" onClick={handleClick}>
-            Transfer Tokens
-          </button>
-        </div>
+        <BtnPrimary title='Transfer' onClick={handleClick}/>
 
         {!isHidden && (
           <p className={`feedback ${isError ? "error" : ""}`}>{feedback}</p>
