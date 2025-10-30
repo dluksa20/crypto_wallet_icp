@@ -1,4 +1,4 @@
-#btn-primary {
+.primary-button-container {
   width: 100%;
   padding: var(--space-btn-padding);
   background: var(--color-accent);
@@ -15,16 +15,16 @@
   transition: background var(--transition-medium) ease, transform var(--transition-fast) ease, box-shadow var(--transition-medium) ease;
 }
 
-#btn-primary:hover:not(:disabled) {
+.primary-button-container:hover:not(:disabled) {
   background: var(--color-accent-dark);
   box-shadow: var(--shadow-hover);
 }
 
-#btn-primary:active:not(:disabled) {
+.primary-button-container:active:not(:disabled) {
   transform: translateY(var(--translate-click));
 }
 
-#btn-primary:disabled {
+.primary-button-container:disabled {
   background: rgba(0,170,255,0.3); 
   cursor: not-allowed;
   opacity: 0.6;

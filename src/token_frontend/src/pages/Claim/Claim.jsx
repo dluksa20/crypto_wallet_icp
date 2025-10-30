@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../../components/templates/Header/Header'
-import Faucet from '../../components/templates/Faucet/Faucet'
+import Header from '../../components/templates/HeaderTemplate/Header'
+import Faucet from '../../components/templates/FaucetTemplate/Faucet'
 import './Claim.css'
 
 const Claim = () => {

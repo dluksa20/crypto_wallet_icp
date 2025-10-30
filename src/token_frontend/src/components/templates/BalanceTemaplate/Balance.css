@@ -1,6 +1,4 @@
 
-
-/* Window Card Layout */
 .balance-container {
   display: flex;
   flex-direction: column;
@@ -15,3 +13,7 @@
   transition: box-shadow var(--transition-slow) ease, transform var(--transition-medium) ease;
 }
 
+.balance-container:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(var(--translate-lift));
+}

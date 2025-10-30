@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../../components/templates/Header/Header'
-import Transfer from '../../components/templates/Transfer/Transfer'
+import Header from '../../components/templates/HeaderTemplate/Header'
+import Transfer from '../../components/templates/TransferTemplate/Transfer'
 import "./Send.css"
 
 const Send = () => {

@@ -1,0 +1,21 @@
+.transfer-container {
+  background: var(--color-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-glow);
+  max-width: 480px;
+  width: 90%;
+  transition: box-shadow var(--transition-slow) ease, transform var(--transition-medium) ease;
+}
+
+.transfer-container:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(var(--translate-lift));
+}
+
+.transfer-subcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}

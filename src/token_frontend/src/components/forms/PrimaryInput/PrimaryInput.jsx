@@ -1,12 +1,13 @@
 import React from "react";
-import "./InputPrimary.css";
+import "./PrimaryInput.css";
 
-const InputPrimary = (props) => {
+const PrimaryInput = (props) => {
   const { setInputValue, inputValue, title, placeholder } = props;
   return (
-    <fieldset>
-      <legend>{title}</legend>
+    <fieldset className="primary-input-container">
+      <legend className="primary-input-title">{title}</legend>
       <input
+        className="primary-input-field"
         type="text"
         placeholder={placeholder}
         value={inputValue}
@@ -16,4 +17,4 @@ const InputPrimary = (props) => {
   );
 };
 
-export default InputPrimary;
+export default PrimaryInput;

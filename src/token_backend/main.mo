@@ -9,7 +9,7 @@ persistent actor class Token(ownerPrincipal : Text) {
   stable let totalSuply : Nat = 1000000000;
   // 'dfx identity get-principal' string needs to be changed if run on different computer
   stable let owner : Principal = Principal.fromText(ownerPrincipal);
-  stable let symbol : Text = "DLUK";
+  stable let symbol : Text = "ZeRo";
 
   transient var balances = HashMap.HashMap<Principal, Nat>(1, Principal.equal, Principal.hash);
   var balanceEntries: [(Principal, Nat)] = [];

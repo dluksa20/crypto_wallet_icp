@@ -1,5 +1,5 @@
 
-.window {
+.faucet-container {
   background: var(--color-surface);
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-lg);
@@ -11,13 +11,13 @@
   transition: box-shadow var(--transition-slow) ease, transform var(--transition-medium) ease;
 }
 
-.window:hover {
+.faucet-container:hover {
   box-shadow: var(--shadow-hover);
   transform: translateY(var(--translate-lift));
 }
 
-/* Heading Style */
-.window h2 {
+
+.faucet-container h2 {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-title);
   color: var(--color-accent);
@@ -29,24 +29,7 @@
   align-items: center;
   justify-content: center;
 }
-.window h2 span {
+.faucet-container h2 span {
   font-size: 1.5em;
   margin-right: 10px;
-}
-
-/* Label/Description style */
-.window label {
-  display: block;
-  margin-bottom: var(--space-lg);
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-input);
-}
-
-
-
-
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
 }

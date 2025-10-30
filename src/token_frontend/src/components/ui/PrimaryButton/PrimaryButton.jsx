@@ -1,12 +1,12 @@
 import React from "react";
-import "./BtnPrimary.css";
+import "./PrimaryButton.css";
 
 const BtnPrimary = (props) => {
   const { onClick, isDisabled, title } = props;
   
 
   return (
-    <button id="btn-primary" onClick={onClick} disabled={isDisabled}>
+    <button className="primary-button-container" onClick={onClick} disabled={isDisabled}>
       {title}
     </button>
   );

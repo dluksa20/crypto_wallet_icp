@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../../components/templates/Header/Header'
-import Faucet from '../../components/templates/Faucet/Faucet'
-import Balance from '../../components/templates/Balance/Balance'
+import Header from '../../components/templates/HeaderTemplate/Header'
+// import Faucet from '../../components/templates/Faucet/Faucet'
+import Balance from '../../components/templates/BalanceTemaplate/Balance'
 import './Wallet.css'
 
 const Wallet = () => {

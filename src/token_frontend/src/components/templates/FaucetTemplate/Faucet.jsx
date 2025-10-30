@@ -5,17 +5,17 @@ import {
   createActor,
 } from "../../../../../declarations/token_backend";
 import { AuthClient } from "@dfinity/auth-client";
-import BtnPrimary from "../../ui/buttonPrimary/BtnPrimary";
-import FeedbackField from "../../ui/feedbackField/FeedbackField";
-import InfoText from "../../styledComponets/InfoText";
+import PrimaryButton from "../../ui/PrimaryButton/PrimaryButton";
+import PrimaryFeedback from "../../ui/PrimaryFeedback/PrimaryFeedback";
 
 function Faucet() {
   const [isDisabled, setDisabled] = useState(false);
   const [btnText, setBtnText] = useState("CLAIM TOKENS");
   const [feedback, setFeedback] = useState(null);
+  const [isHidden, setIsHidden] = useState(true)
 
   async function handleClick(event) {
-    event.preventDefault();
+    // event.preventDefault();
     setDisabled(true);
     setBtnText("Processing...");
     setFeedback(null);
@@ -40,19 +40,19 @@ function Faucet() {
         setFeedback({
           response: result,
           message: "Payout successful! 10,000 ZeRo tokens claimed.",
-          type: "success",
+          type: "ok",
         });
       } else if (result == "claimed") {
         setFeedback({
           response: result,
           message: "Tokens already claimed!",
-          type: "claimed",
+          type: "ok",
         });
       } else if (result == "insufficient funds") {
         setFeedback({
           response: result,
           message: "Insuficient funds in the Canister!",
-          type: "no-funds",
+          type: "warning",
         });
       }
     } catch (error) {
@@ -63,23 +63,28 @@ function Faucet() {
         type: "error",
       });
     }
+    setBtnText("CLAIM TOKENS");
+    setIsHidden(true)
+    setDisabled(false);
   }
 
   return (
-    <div className="blue window">
+    <div className="faucet-container">
       <h2>
         <span role="img" aria-label="tap emoji">
           🚰
         </span>
         Faucet
       </h2>
-      <InfoText text="Get your free DLUK tokens here! Claim 10,000 ZeRo coins to your account." />
-      <BtnPrimary
+      <p>
+        Get your free DLUK tokens here! Claim 10,000 ZeRo coins to your account
+      </p>
+      <PrimaryButton
         title={btnText}
         onClick={handleClick}
         isDisabled={isDisabled}
       />
-      <FeedbackField feedback={feedback} />
+      <PrimaryFeedback feedback={feedback} />
     </div>
   );
 }

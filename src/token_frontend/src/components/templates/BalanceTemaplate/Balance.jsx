@@ -2,19 +2,15 @@ import React, { useState } from "react";
 import { Principal } from "@dfinity/principal";
 import { token_backend } from "../../../../../declarations/token_backend";
 import "./Balance.css";
-import BtnPrimary from "../../ui/buttonPrimary/BtnPrimary";
-import InputPrimary from "../../forms/inputPrimary/InputPrimary";
-import InfoText from "../../styledComponets/InfoText";
+import PrimaryButton from "../../ui/PrimaryButton/PrimaryButton";
+import PrimaryInput from "../../forms/PrimaryInput/PrimaryInput";
+
 
 function Balance() {
   const [inputValue, setInputValue] = useState("");
   const [accountBalance, setAccountBalance] = useState("");
   const [tokenSymbol, setTokenSymbol] = useState("");
   const [isHidden, setHidden] = useState(true);
-
-  const handleInputChange = (value) => {
-    setInputValue(value);
-  };
 
   async function handleClick() {
     const principal = Principal.fromText(inputValue);
@@ -26,17 +22,15 @@ function Balance() {
 
   return (
     <div className="balance-container">
-      <InputPrimary
+      <PrimaryInput
         value={inputValue}
-        setInputValue={handleInputChange}
+        setInputValue={setInputValue}
         title="Check account token balance:"
         placeholder="Enter a Principal ID"
       />
-      <BtnPrimary title="Check Balance" onClick={handleClick} />
-      <InfoText
-        isHidden={isHidden}
-        text={`This account has a balance of ${accountBalance} ${tokenSymbol}`}
-      />
+      <PrimaryButton title="Check Balance" onClick={handleClick} />
+      <p hidden={isHidden}> Wallet has balance of {accountBalance} {tokenSymbol} tokens</p>
+
     </div>
   );
 }

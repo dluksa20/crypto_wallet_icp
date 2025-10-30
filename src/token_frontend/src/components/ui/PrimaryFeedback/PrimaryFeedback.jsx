@@ -1,5 +1,5 @@
 import React from "react";
-import './FeedbackField.css'
+import './PrimaryFeedback.css'
 
 const FeedbackField = (props) => {
   const { feedback } = props;
@@ -8,7 +8,8 @@ const FeedbackField = (props) => {
   }
   const feedbackClass = feedback.type === "error" ? "error" : feedback.type;
 
-  return <p className={`feedback ${feedbackClass}`}>{feedback.message}</p>;
+  return <p className={`primary-feedback ${feedbackClass}`}>{feedback.message}</p>;
 };
 
 export default FeedbackField;
+ 
